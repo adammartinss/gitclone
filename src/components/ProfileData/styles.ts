@@ -26,10 +26,23 @@ export const Flex = styled.div`
             font-weight: 300;
         }
     }
+
+    @media (min-width: 720px) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        >div{
+            margin-top: 16px;
+            margin-left: 0;
+        }
+    }
 `;
 export const Avatar = styled.img`
     width: 16%;
     border-radius: 50%;
+    @media (min-width: 768px) {
+        width: 85%;
+    }
 `;
 export const Row = styled.div`
     display: flex;
@@ -58,16 +71,14 @@ const iconCSS = css`
 export const PeopleIcon = styled(RiGroupLine)`
     ${iconCSS}
 `;
-export const Column = styled.div`
-    li{
+export const Column = styled.ul`
+    li {
         display: flex;
         align-items: center;
         font-size: 14px;
+        line-height: 1.75;
     }
-    li+li{
-        margin-top: 10px;
-    }
-    span{
+    span {
         margin-left: 5px;
         overflow: hidden;
         text-overflow: ellipsis;

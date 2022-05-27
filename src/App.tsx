@@ -1,3 +1,5 @@
+import 'react-calendar-heatmap/dist/styles.css'
+
 import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -5,6 +7,7 @@ import Header from './components/Header'
 import Profile from './pages/Profile'
 import Repo from './pages/Profile'   
 import GlobalStyles from './styles/GlobalStyles'
+
 function App() {
     return (
         <BrowserRouter>
